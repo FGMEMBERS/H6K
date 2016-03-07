@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <sim>
+
+  <!-- Aircraft name -->
+  <description>Kawanisi H6K</description>
+  <!-- Author & Status -->
+  <author>virt_fly</author>
+  <status>just started</status>
+  <!-- Flight Dynamics Model Information --> 
+  <flight-model>jsb</flight-model> <!-- FDM -->
+  <aero>H6K</aero> <!-- File name(.xml) -->
+
+    <!-- addition start -->
+    <type type="string">seaplane</type>
+  
+    <startup>
+      <splash-texture>Aircraft/H6K/H6K_splash.png</splash-texture>
+    </startup>
+    <!-- addition end -->
+
+    <!-- addition-4 start -->
+  <fdm>
+   <surface>
+    <override-level>1</override-level>
+   </surface>
+  </fdm>
+    <!-- addition-4 end -->
+
+  <!-- Sound file -->
+    <sound>
+     <path>H6K-sound.xml</path>
+    </sound>
+
+  <!-- 3D models -->
+  <model>
+   <path>Aircraft/H6K/Models/H6K.xml</path>
+  </model>
+
+  <!-- Setup of viewpoints --> 
+  <!-- chase view:distance from a viewpoint to the body(m) -->
+  <!-- <chase-distance-m type="double" archive="y">-35.0</chase-distance-m> -->
+  <chase-distance-m type="double" archive="y">-45.0</chase-distance-m>
+
+  <!-- Default View -->
+  <view>
+   <config>
+     <pitch-offset-deg>-8.8</pitch-offset-deg>
+     <default-field-of-view-deg>80</default-field-of-view-deg>
+   </config>
+  </view>
+
+  <!-- Cockpit View -->
+  <view n="0">
+   <name>Cockpit View</name>
+    <type>lookfrom</type> <!-- Means from the specified coordinates -->
+    <internal archive="y">true</internal> <!-- Means from within the body -->
+    <config>
+            <!-- Viewpoint position -->
+            <!-- <x-offset-m archive="y">0.0</x-offset-m>
+            <y-offset-m archive="y">0.66</y-offset-m>
+            <z-offset-m archive="y">-2.80</z-offset-m>            
+            <pitch-offset-deg>-10</pitch-offset-deg> -->
+	<x-offset-m archive="y" type="double">0.3</x-offset-m>
+	<y-offset-m archive="y" type="double">0.1</y-offset-m> <!-- vertical -->
+	<z-offset-m archive="y" type="double">-8.7</z-offset-m> <!-- longtudinal -->
+            <!-- vertical angle -->
+	<pitch-offset-deg>-13.0</pitch-offset-deg>
+            <!-- zoom ratio -->
+            <default-field-of-view-deg>67.0</default-field-of-view-deg>
+    </config>
+   </view>
+
+  <!-- User-defined View:Rear seat -->
+  <!-- <view n="100">
+   <name>Trainer View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>  
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.03</ground-level-nearplane-m>
+            <x-offset-m archive="y">0.0</x-offset-m>
+            <y-offset-m archive="y">1.03</y-offset-m>
+            <z-offset-m archive="y">-1.33</z-offset-m>
+            <pitch-offset-deg>-10</pitch-offset-deg>
+            <default-field-of-view-deg>67.0</default-field-of-view-deg>
+    </config>
+   </view> -->
+
+  <!-- Help message for key settings -->
+  <help>
+   <key>
+    <name>Ctrl-B</name>
+    <desc>toggle speed brake</desc>
+   </key>
+  </help>
+
+    <!-- addition-2 start -->
+    <menubar include="Dialogs/H6K-menu.xml"/>
+    <!-- addition-2 end -->
+
+ </sim>
+
+ <!-- key settings  nothing -->
+ <input>
+   <keyboard>
+   </keyboard>
+  </input>
+
+ <!-- engines:initial setting -->
+ <engines>
+  <engine n="0">
+   <running>true</running>
+  </engine>
+  <engine n="1">
+   <running>true</running>
+  </engine>
+  <engine n="2">
+   <running>true</running>
+  </engine>
+  <engine n="3">
+   <running>true</running>
+  </engine>
+ </engines>
+
+ <!-- fuel -->
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <level-gal_us archive="y">130</level-gal_us>
+   </tank>
+   <tank n="1">
+    <level-gal_us archive="y">130</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+
+    <!-- addition-3 start -->
+  <nasal>
+    <H6K>
+      <file>Aircraft/H6K/Nasal/liveries.nas</file>
+      <file>Aircraft/H6K/Nasal/rocking_ship.nas</file> 
+      <!--<file>Aircraft/H6K/Nasal/drifting_ship.nas</file>-->
+     </H6K>
+  </nasal>
+    <!-- addition-3 end -->
+
+</PropertyList>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>text.ac</path>
+
+  <animation>
+   <object-name>text</object-name>
+  </animation>
+
+</PropertyList>

@@ -1,0 +1,827 @@
+<PropertyList>
+
+<path>H6K5.ac</path>
+
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/H6K/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
+
+  <animation>
+    <object-name>uper_body</object-name>
+    <object-name>lower_body</object-name>
+    <object-name>wing</object-name>
+    <object-name>horizontal_tail_u</object-name>
+    <object-name>horizontal_tail_l</object-name>
+    <object-name>right_vertical_tail</object-name>
+    <object-name>left__vertical_tail</object-name>
+    <object-name>right_rudder</object-name>
+    <object-name>left_rudder</object-name>
+    <object-name>right_float0</object-name>
+    <object-name>right_float1</object-name>
+    <object-name>left_float0</object-name>
+    <object-name>left_float1</object-name>
+    <object-name>cockpit_out</object-name>
+    <object-name>cockpit_in</object-name>
+    <object-name>engine_ro_u</object-name>
+    <object-name>engine_ro_l</object-name>
+    <object-name>engine_ri_u</object-name>
+    <object-name>engine_ri_l</object-name>
+    <object-name>engine_lo_u</object-name>
+    <object-name>engine_lo_l</object-name>
+    <object-name>engine_li_u</object-name>
+    <object-name>engine_li_l</object-name>
+    <object-name>prop_ro</object-name>
+    <object-name>propdisk1_ro</object-name>
+    <object-name>propdisk2_ro</object-name>
+    <object-name>prop_ri</object-name>
+    <object-name>propdisk1_ri</object-name>
+    <object-name>propdisk2_ri</object-name>
+    <object-name>prop_lo</object-name>
+    <object-name>propdisk1_lo</object-name>
+    <object-name>propdisk2_lo</object-name>
+    <object-name>prop_li</object-name>
+    <object-name>propdisk1_li</object-name>
+    <object-name>propdisk2_li</object-name>
+    <object-name>spiner_ro</object-name>
+    <object-name>spiner_ri</object-name>
+    <object-name>spiner_lo</object-name>
+    <object-name>spiner_li</object-name>
+    <object-name>stand_r1</object-name>
+    <object-name>stand_rf1</object-name>
+    <object-name>stand_rf2</object-name>
+    <object-name>stand_rr1</object-name>
+    <object-name>stand_rr2</object-name>
+    <object-name>stand_l1</object-name>
+    <object-name>stand_lf1</object-name>
+    <object-name>stand_lf2</object-name>
+    <object-name>stand_lr1</object-name>
+    <object-name>stand_lr2</object-name>
+    <object-name>Cylinder.021</object-name>
+    <object-name>Cylinder.044</object-name>
+ </animation>
+
+
+   <!-- Transparent Surfaces for Rembrandt rendering -->
+   <effect>
+       <inherits-from>Effects/model-transparent</inherits-from>
+       <!--<inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>-->
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+       <object-name>propdisc2_ro</object-name>
+       <object-name>propdisc2_ri</object-name>
+       <object-name>propdisc2_li</object-name>
+       <object-name>propdisc2_lo</object-name>
+       <object-name>propdisc1_ro</object-name>
+       <object-name>propdisc1_ri</object-name>
+       <object-name>propdisc1_li</object-name>
+       <object-name>propdisc1_lo</object-name>
+   </effect>
+
+  <animation>
+    <type>material</type>
+    <object-name>uper_body</object-name>
+    <object-name>lower_body</object-name>
+    <object-name>wing</object-name>
+    <object-name>horizontal_tail_u</object-name>
+    <object-name>horizontal_tail_l</object-name>
+    <object-name>right_vertical_tail</object-name>
+    <object-name>left_vertical_tail</object-name>
+    <object-name>right_rudder</object-name>
+    <object-name>left_rudder</object-name>
+    <object-name>right_float_0</object-name>
+    <object-name>right_float_1</object-name>
+    <object-name>left_float_0</object-name>
+    <object-name>left_float_1</object-name>
+    <object-name>cockpit_out</object-name>
+    <object-name>cockpit_in</object-name>
+    <object-name>engine_ro_u</object-name>
+    <object-name>engine_ro_l</object-name>
+    <object-name>engine_ri_u</object-name>
+    <object-name>engine_ri_l</object-name>
+    <object-name>engine_lo_u</object-name>
+    <object-name>engine_lo_l</object-name>
+    <object-name>engine_li_u</object-name>
+    <object-name>engine_li_l</object-name>
+    <object-name>prop_ro</object-name>
+    <object-name>propdisk1_ro</object-name>
+    <object-name>propdisk2_ro</object-name>
+    <object-name>prop_ri</object-name>
+    <object-name>propdisk1_ri</object-name>
+    <object-name>propdisk2_ri</object-name>
+    <object-name>prop_lo</object-name>
+    <object-name>propdisk1_lo</object-name>
+    <object-name>propdisk2_lo</object-name>
+    <object-name>prop_li</object-name>
+    <object-name>propdisk1_li</object-name>
+    <object-name>propdisk2_li</object-name>
+    <object-name>spiner_ro</object-name>
+    <object-name>spiner_ri</object-name>
+    <object-name>spiner_lo</object-name>
+    <object-name>spiner_li</object-name>
+    <object-name>stand_r1</object-name>
+    <object-name>stand_rf1</object-name>
+    <object-name>stand_rf2</object-name>
+    <object-name>stand_rr1</object-name>
+    <object-name>stand_rr2</object-name>
+    <object-name>stand_l1</object-name>
+    <object-name>stand_lf1</object-name>
+    <object-name>stand_lf2</object-name>
+    <object-name>stand_lr1</object-name>
+    <object-name>stand_lr2</object-name>
+    <object-name>Cylinder.021</object-name>
+    <object-name>Cylinder.044</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <!--<texture>H6K_silver.png</texture>-->
+    <texture>H6K_green.png</texture>
+  </animation>
+  <!-- Lights -->
+  <model>
+    <name>RedWingtipLight</name>
+    <path>Aircraft/H6K/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  -4.00 </x-m>
+      <y-m> -17.729 </y-m>
+      <z-m>  3.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>GreenWingtipLight</name>
+    <path>Aircraft/H6K/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -4.00 </x-m>
+      <y-m> 17.729 </y-m>
+      <z-m> 3.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RedFormationLight</name>
+    <path>Aircraft/H6K/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  -1.70 </x-m>
+      <y-m> -15.729 </y-m>
+      <z-m>  3.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>GreenFormationLight</name>
+    <path>Aircraft/H6K/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -1.80 </x-m>
+      <y-m> 15.729 </y-m>
+      <z-m> 3.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LeftAnchorLight</name>
+    <path>Aircraft/H6K/Models/light/anchorlight.xml</path>
+    <offsets>
+      <x-m>  -2.55 </x-m>
+      <y-m> -18.729 </y-m>
+      <z-m>  3.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RightAnchorLight</name>
+    <path>Aircraft/H6K/Models/light/anchorlight.xml</path>
+    <offsets>
+      <x-m> -2.55 </x-m>
+      <y-m> 18.729 </y-m>
+      <z-m> 3.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>LeftTailLight</name>
+    <path>Aircraft/H6K/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m>  12.64 </x-m>
+      <y-m> -0.2 </y-m>
+      <z-m>  0.1 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RightTailLight</name>
+    <path>Aircraft/H6K/Models/light/WhiteLight.xml</path>
+    <offsets>
+      <x-m> 12.64 </x-m>
+      <y-m> 0.2 </y-m>
+      <z-m> 0.1 </z-m>
+    </offsets>
+  </model>
+
+  <!--  light cone -->
+  <model>
+    <name>LeftLandingLight</name>
+    <path>Aircraft/H6K/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>          -4.27 </x-m>
+      <y-m>           -9 </y-m>
+      <z-m>           1.943 </z-m>
+      <pitch-deg>    -14.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>RightLandingLight</name>
+    <path>Aircraft/H6K/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>          -4.17 </x-m>
+      <y-m>           9 </y-m>
+      <z-m>           1.943 </z-m>
+      <pitch-deg>    -14.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <name>All-Landing-Light</name>
+    <object-name>LeftLandingLight</object-name>
+    <object-name>RightLandingLight</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>All-Landing-Light</object-name>
+    <condition>
+      <less-than>
+        <property>position/altitude-ft</property>
+        <!-- <value>10000</value> -->
+        <value>3000</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Trainée fuselage -->
+  <model>
+    <path>Aircraft/H6K/Models/Effects/wakeC.xml</path>
+    <offsets>
+      <x-m> -0.640 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.218 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Trainée gauche -->
+  <model>
+    <path>Aircraft/H6K/Models/Effects/wakeG.xml</path>
+    <offsets>
+      <x-m>  0.640 </x-m>
+      <y-m> -10.200 </y-m>
+      <z-m> -1.018 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Trainée droite -->
+  <model>
+    <path>Aircraft/H6K/Models/Effects/wakeD.xml</path>
+    <offsets>
+      <x-m>  0 </x-m>
+      <y-m>  10.200 </y-m>
+      <z-m> -1.018 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> 
+
+<animation>
+  <type>select</type>
+  <object-name>pilot</object-name>
+  <condition>
+   <greater-than>
+    <property>sim/current-view/view-number</property>
+    <value>0</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc2_ro</object-name>
+  <condition>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.000</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc1_ro</object-name>
+  <condition>
+  <and>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.000</value>
+   </greater-than>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.001</value>
+   </less-than>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>prop_ro</object-name>
+  <condition>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.001</value>
+   </less-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc2_ri</object-name>
+  <condition>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.000</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc1_ri</object-name>
+  <condition>
+  <and>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.000</value>
+   </greater-than>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.001</value>
+   </less-than>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>prop_ri</object-name>
+  <condition>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.001</value>
+   </less-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc2_li</object-name>
+  <condition>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.000</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc1_li</object-name>
+  <condition>
+  <and>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.000</value>
+   </greater-than>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.001</value>
+   </less-than>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>prop_li</object-name>
+  <condition>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.001</value>
+   </less-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc2_lo</object-name>
+  <condition>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.000</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>propdisc1_lo</object-name>
+  <condition>
+  <and>
+   <greater-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.000</value>
+   </greater-than>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>1500.001</value>
+   </less-than>
+   </and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>prop_lo</object-name>
+  <condition>
+   <less-than>
+    <property>velocities/true-airspeed-kt</property>
+    <value>600.001</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>prop_ro</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>5.75</y-m>
+   <z-m>1.95</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc1_ro</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>5.75</y-m>
+   <z-m>1.95</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc2_ro</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <factor>0.005</factor>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>5.75</y-m>
+   <z-m>1.95</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>prop_ri</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>1.98</y-m>
+   <z-m>1.82</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc1_ri</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>1.98</y-m>
+   <z-m>1.82</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc2_ri</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <factor>0.005</factor>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>1.98</y-m>
+   <z-m>1.82</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>prop_li</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>-1.98</y-m>
+   <z-m>1.82</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc1_li</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>-1.98</y-m>
+   <z-m>1.82</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc2_li</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <factor>0.005</factor>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>-1.98</y-m>
+   <z-m>1.82</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>prop_lo</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>-5.75</y-m>
+   <z-m>1.95</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc1_lo</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>-5.75</y-m>
+   <z-m>1.95</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propdisc2_lo</object-name>
+  <property>velocities/true-airspeed-kt</property>
+  <factor>0.005</factor>
+  <center>
+  <x-m>-2.391</x-m>
+   <y-m>-5.75</y-m>
+   <z-m>1.95</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
+<!-- CONTROL SURFACES -->
+
+ <animation>
+  <type>translate</type>
+  <object-name>glass</object-name>
+  <object-name>canopy</object-name>
+  <property>controls/canopy/position-norm</property>
+  <factor>0.73</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Elevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>20</factor>
+  <center>
+   <x-m>4.955</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.099</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>20</factor>
+  <center>
+   <x-m>5.402</x-m>
+   <y-m>0</y-m>
+   <z-m>0.248</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>LHflap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-30</factor>
+  <center>
+   <x-m>0.946</x-m>
+   <y-m>-0.673</y-m>
+   <z-m>-0.464</z-m>
+  </center>
+  <axis>
+   <x>-0.121</x>
+   <y>-0.984</y>
+   <z>0.131</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>RHflap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>30</factor>
+  <center>
+   <x-m>0.946</x-m>
+   <y-m>0.673</y-m>
+   <z-m>-0.464</z-m>
+  </center>
+  <axis>
+   <x>-0.121</x>
+   <y>0.984</y>
+   <z>0.131</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>LHaileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-15</factor>
+  <center>
+   <x-m>0.718</x-m>
+   <y-m>-2.527</y-m>
+   <z-m>-0.193</z-m>
+  </center>
+  <axis>
+   <x>-0.119</x>
+   <y>-0.985</y>
+   <z>0.122</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>RHaileron</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>15</factor>
+  <center>
+   <x-m>0.718</x-m>
+   <y-m>2.527</y-m>
+   <z-m>-0.193</z-m>
+  </center>
+  <axis>
+   <x>-0.119</x>
+   <y>0.985</y>
+   <z>0.122</z>
+  </axis>
+ </animation>
+ 
+
+ <!-- cockpit -->
+ <animation>
+  <type>rotate</type>
+  <object-name>throttleLever</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>-30</factor>
+  <center>
+    <x-m>-0.06</x-m>
+    <y-m>-0.36</y-m>
+    <z-m> 0.38</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>0.93969</y>
+    <z>-0.3420</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>propPitchLever</object-name>
+  <property>controls/engines/engine[0]/propeller-pitch</property>
+  <factor>80</factor>
+  <center>
+    <x-m>-0.06</x-m>
+    <y-m>-0.31</y-m>
+    <z-m> 0.36</z-m>
+  </center>
+  <axis>
+    <x>0</x>
+    <y>0.93969</y>
+    <z>-0.3420</z>
+  </axis>
+ </animation>
+
+</PropertyList>
